@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <select name="chapter_select" 
+    id="" hx-get="/chapter/" hx-trigger="change" hx-target="#showchapter">
+        {% for x in books %}
+        <option value="{{x.l_idlibro}}">{{x.l_book}}</option>
+        {% endfor %}
+    </select>
+
+    <div id="showchapter">
+
+    </div>
+    <div id="showverse">
+
+    </div>
+</body>
+</html>

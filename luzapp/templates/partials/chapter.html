@@ -1,0 +1,6 @@
+Chapters in {{book}}
+<select name="verse_select" id="" hx-get="/verse/" hx-trigger="change", hx-target="#showverse">
+    {% for x in chapters %}
+    <option value="{{x.c_idcapitulo}}">{{x.c_capitulo_desc}}</option>
+    {% endfor %}
+</select>
